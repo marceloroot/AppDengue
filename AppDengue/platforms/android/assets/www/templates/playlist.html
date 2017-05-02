@@ -1,0 +1,59 @@
+<ion-view view-title="Playlist">
+  <ion-content>
+   
+      <div class="list" ng-init='load()'>
+          <form role="form"></form>
+          <label class="item item-input">
+              <input type="text" placeholder="Nome da Rua" ng-model="formulario.rua">
+          </label>
+          <label class="item item-input">
+              <input type="text" placeholder="Numero" ng-model="formulario.numero">
+          </label>
+          <label class="item item-input">
+              <textarea placeholder="Descricao" ng-model="formulario.descricao"></textarea>
+          </label>
+
+
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  Bairro
+              </div>
+              <select ng-model="formulario.bairro" ng-options="value._id as value.title for value in bairros"></select>
+          </label>
+
+
+          <div class="item item-toggle">
+              Foco
+              <label class="toggle toggle-assertive">
+                  <input type="checkbox" ng-model="formulario.foco">
+                  <div class="track">
+                      <div class="handle"></div>
+                  </div>
+              </label>
+          </div>
+
+
+
+
+          <ion-list>
+
+              <ion-checkbox ng-model="formulario.garrafa">Garrafa</ion-checkbox>
+              <ion-checkbox ng-model="formulario.Plasitco">Plasitco</ion-checkbox>
+              <ion-checkbox ng-model="formulario.Pneu">Pneu</ion-checkbox>
+              <ion-checkbox ng-model="formulario.Lixo">Lixo</ion-checkbox>
+              <ion-checkbox ng-model="formulario.Psina">Psina</ion-checkbox>
+
+          </ion-list>
+          <div class="item">
+              <button class="button button-positive" ng-click="chama(formulario)">
+                  Alterar
+              </button>
+
+              <button class="button button-calm" ng-click="sinc()">
+                  Volta
+              </button>
+          </div>
+      </div>
+
+  </ion-content>
+</ion-view>
