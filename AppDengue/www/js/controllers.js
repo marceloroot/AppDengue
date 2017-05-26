@@ -16,7 +16,8 @@ angular.module('starter.controllers', [])
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope
   }).then(function(modal) {
-    $scope.modal = modal;
+      $scope.modal = modal;
+
   });
 
   // Triggered in the login modal to close it
